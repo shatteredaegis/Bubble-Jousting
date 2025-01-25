@@ -8,7 +8,7 @@ public class PoppableLimb : MonoBehaviour
 {
     [SerializeField] private bool crucialLimb;
     [SerializeField] private GameObject popVFX;
-
+    [SerializeField] private int whichPlayer;
     private void Start()
     {
         popVFX = VFXManager.instance.popVFX;
@@ -24,7 +24,6 @@ public class PoppableLimb : MonoBehaviour
 
     private void PopVFX(Transform pos)
     {
-        Debug.Log("pop");
         GameObject pop = Instantiate(popVFX, pos);
         pop.transform.SetParent(null);
     }
@@ -35,6 +34,7 @@ public class PoppableLimb : MonoBehaviour
             //game reset
             StartCoroutine(PopCrucialLimb());
             GameManager.instance.gameOver = true;
+            DecideScoreChanges();
         }
         else
         {
@@ -44,6 +44,17 @@ public class PoppableLimb : MonoBehaviour
         }
     }
 
+    private void DecideScoreChanges()
+    {
+        if (whichPlayer == 2)
+        {
+            GameManager.instance.plr2Score += 1;
+        }
+        else
+        {
+            GameManager.instance.plr1Score += 1;
+        }
+    }
     private IEnumerator PopCrucialLimb()
     {
         SoundManager.instance.fadingMusic = true;

@@ -23811,7 +23811,7 @@ GameObject:
   - component: {fileID: 4899198181340782993}
   - component: {fileID: 4080805744608522683}
   m_Layer: 0
-  m_Name: Shield Hit VFX
+  m_Name: SwordHitVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

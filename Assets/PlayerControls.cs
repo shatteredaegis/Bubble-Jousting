@@ -255,6 +255,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Thrust Sword"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""60bb4aee-1fe0-4af7-aa74-0578ae3eb108"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust Sword"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }

@@ -110,16 +110,24 @@ public class Player1LocomotionManager : MonoBehaviour
         head2RB.AddForce(uplift * Vector3.up, ForceMode.Acceleration);
         root2RB.AddForce(uplift * Vector3.up, ForceMode.Acceleration);
     }
-
+    
     private void RaiseShield()
     {
         if (PlayerInputManager.instance.plr1RaiseShield)
         {
+            //body lean back
+            root1RB.AddForce(150 * -transform.right, ForceMode.Force);
+            
+            //shield arm forwards
             shield1Arm.AddForce(100 * transform.right, ForceMode.Acceleration);
         }
 
         if (PlayerInputManager.instance.plr2RaiseShield)
         {
+            //body lean back
+            root2RB.AddForce(150 * transform.right, ForceMode.Force);
+            
+            //shield arm forwards
             shield2Arm.AddForce(100 * -transform.right, ForceMode.Acceleration);
         }
     }

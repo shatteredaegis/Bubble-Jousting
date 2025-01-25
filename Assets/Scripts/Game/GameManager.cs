@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject startButton;
     [SerializeField] private GameObject countdownObj;
     [SerializeField] private TextMeshProUGUI countdownText;
+    [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] float countdownTimer;
     [SerializeField] private float elapsedTime;
     [SerializeField] private float slowTimer;
@@ -28,6 +29,10 @@ public class GameManager : MonoBehaviour
     [Header("Flags")]
     [SerializeField] public bool gameOver = false;
 
+    [Header("Score")] 
+    [SerializeField] public int plr1Score = 0;
+    [SerializeField] public int plr2Score = 0;
+
     private void Awake()
     {
         if (instance == null)
@@ -40,11 +45,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void FetchStartGameVars()
+    {
+        startButton = StartGameVars.instance.startButton;
+        countdownObj = StartGameVars.instance.countdownObj;
+        countdownText = StartGameVars.instance.countdownText;
+        player1Restraint = StartGameVars.instance.player1Restraint;
+        player2Restraint = StartGameVars.instance.player2Restraint;
+    }
     private void Start()
     {
         //DontDestroyOnLoad(gameObject);
     }
 
+    private void SetScoreboard()
+    {
+        scoreText.text = plr1Score + " - " + plr2Score;
+    }
     private void Update()
     {
         GameEnd();
@@ -100,6 +117,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //FetchStartGameVars();
+        SetScoreboard();
         StartGame();
     }
     public void InstantiateShieldWhenArmPopped(Transform weaponTransform)

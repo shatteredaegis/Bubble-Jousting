@@ -8,6 +8,7 @@ public class VFXManager : MonoBehaviour
     public static VFXManager instance;
     
     public GameObject popVFX;
+    public GameObject smallPopVFX;
 
     private void Awake()
     {

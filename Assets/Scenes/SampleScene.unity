@@ -868,7 +868,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445376047}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1017,7 +1017,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454344138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5021,9 +5021,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3847f2e725ac3b94bb568e8483af2104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repelForce: 20
   limb: {fileID: 0}
   vfxPoint: {fileID: 2057146278}
-  shieldHitVFX: {fileID: 6463101091461035433, guid: d8da5e5338934f94d9b87696c7d4510c, type: 3}
+  swordRB: {fileID: 1696072017}
+  shieldHitVFX: {fileID: 4201248186105943371, guid: f67c05930603ffc45bd70b19a54c9b34, type: 3}
   swordHitVFX: {fileID: 6463101091461035433, guid: d8da5e5338934f94d9b87696c7d4510c, type: 3}
 --- !u!138 &1696072016
 FixedJoint:
@@ -7671,7 +7673,7 @@ ArticulationBody:
   m_GameObject: {fileID: 2051341088415584019}
   m_Enabled: 1
   serializedVersion: 5
-  m_Mass: 8
+  m_Mass: 12
   m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
   m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
@@ -8187,7 +8189,7 @@ Transform:
   m_GameObject: {fileID: 8366066684867952291}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000014901161, y: -0.0000000018626451, z: -0.17364824, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 0.5000002, z: 0.675}
+  m_LocalPosition: {x: 0.17101002, y: 0.96984625, z: 0.675}
   m_LocalScale: {x: 3, y: 5, z: 0.75000006}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8834,7 +8836,7 @@ Transform:
   m_GameObject: {fileID: 7120115496224470096}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000014901161, y: -0.0000000018626451, z: -0.17364824, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 0.5000002, z: 0.675}
+  m_LocalPosition: {x: 0.17101002, y: 0.96984625, z: 0.675}
   m_LocalScale: {x: 3, y: 5, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9621,9 +9623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3847f2e725ac3b94bb568e8483af2104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repelForce: 20
   limb: {fileID: 0}
   vfxPoint: {fileID: 582059784}
-  shieldHitVFX: {fileID: 6463101091461035433, guid: d8da5e5338934f94d9b87696c7d4510c, type: 3}
+  swordRB: {fileID: 8412383759889264275}
+  shieldHitVFX: {fileID: 4201248186105943371, guid: f67c05930603ffc45bd70b19a54c9b34, type: 3}
   swordHitVFX: {fileID: 6463101091461035433, guid: d8da5e5338934f94d9b87696c7d4510c, type: 3}
 --- !u!54 &8412383759889264275
 Rigidbody:
@@ -9777,7 +9781,7 @@ ArticulationBody:
   m_GameObject: {fileID: 3064069352092908687}
   m_Enabled: 1
   serializedVersion: 5
-  m_Mass: 3
+  m_Mass: 2
   m_ParentAnchorPosition: {x: 0, y: 0.62250495, z: -0.39136857}
   m_ParentAnchorRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
   m_AnchorPosition: {x: 0, y: 0.90526557, z: 0.50000006}
