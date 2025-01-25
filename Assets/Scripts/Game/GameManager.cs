@@ -4,17 +4,20 @@ using UnityEngine;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+    
     [SerializeField] GameObject startButton;
     [SerializeField] private GameObject countdownObj;
     [SerializeField] private TextMeshProUGUI countdownText;
     [SerializeField] double countdownTimer;
     [SerializeField] private double elapsedTime;
+    [SerializeField] private GameObject shield;
 
     [Header("Player Restraints")]
     public GameObject player1Restraint;
 
     public GameObject player2Restraint;
-
+    
     public void StartGame()
     {
         startButton.SetActive(false);
@@ -41,5 +44,10 @@ public class GameManager : MonoBehaviour
         player2Restraint.SetActive(false);
         
         yield return null;
+    }
+
+    public void InstantiateShieldWhenArmPopped(Transform weaponTransform)
+    {
+        Instantiate(shield, weaponTransform);
     }
 }

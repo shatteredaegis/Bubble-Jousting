@@ -19,6 +19,7 @@ public class Player1LocomotionManager : MonoBehaviour
     [SerializeField] private ArticulationBody rightFoot1RB;
     [SerializeField] private ArticulationBody sword1Arm;
     [SerializeField] private ArticulationBody shield1Arm;
+    [SerializeField] private GameObject sword1;
 
     [Header("Player 1 Input")]
     [SerializeField] private float move1Input = 0;
@@ -32,6 +33,7 @@ public class Player1LocomotionManager : MonoBehaviour
     [SerializeField] private ArticulationBody rightFoot2RB;
     [SerializeField] private ArticulationBody sword2Arm;
     [SerializeField] private ArticulationBody shield2Arm;
+    [SerializeField] private GameObject sword2;
 
     [Header("Player 2 Input")]
     [SerializeField] private float move2Input = 0;

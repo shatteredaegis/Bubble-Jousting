@@ -5,13 +5,19 @@ using UnityEngine;
 
 public class PlayerSword : MonoBehaviour
 {
+    [SerializeField] private PoppableLimb limb;
     private void OnCollisionEnter(Collision coll)
     {
-        Debug.Log("1");
         if (coll.collider.CompareTag("Poppable") && coll.gameObject.layer != gameObject.layer)
         {
-            Debug.Log("2");
-            coll.gameObject.SetActive(false);
+            limb = coll.gameObject.GetComponent<PoppableLimb>();
+
+            if (limb == null)
+            {
+                limb = coll.gameObject.GetComponent<PoppableArmLimb>(); 
+            }
+
+            limb.PopLimb();
         }
     }
 }
