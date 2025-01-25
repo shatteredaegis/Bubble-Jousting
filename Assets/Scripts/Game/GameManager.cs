@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -9,15 +12,44 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject startButton;
     [SerializeField] private GameObject countdownObj;
     [SerializeField] private TextMeshProUGUI countdownText;
-    [SerializeField] double countdownTimer;
-    [SerializeField] private double elapsedTime;
+    [SerializeField] float countdownTimer;
+    [SerializeField] private float elapsedTime;
+    [SerializeField] private float slowTimer;
     [SerializeField] private GameObject shield;
 
     [Header("Player Restraints")]
     public GameObject player1Restraint;
 
     public GameObject player2Restraint;
-    
+
+    [Header("Configuration")]
+    [SerializeField] private float slowAmountOnGameOver = 0.5f;
+
+    [Header("Flags")]
+    [SerializeField] public bool gameOver = false;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        //DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        GameEnd();
+    }
+
     public void StartGame()
     {
         startButton.SetActive(false);
@@ -46,6 +78,26 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
+    private void GameEnd()
+    {
+        if (!gameOver)
+            return;
+        
+        slowTimer += Time.unscaledDeltaTime;
+        Time.timeScale = Mathf.Lerp(1, slowAmountOnGameOver, slowTimer / 2);
+
+        if (slowTimer >= 5)
+        {
+            GameReset();
+            slowTimer = 0;
+        }
+    }
+    private void GameReset()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartGame();
+    }
     public void InstantiateShieldWhenArmPopped(Transform weaponTransform)
     {
         Instantiate(shield, weaponTransform);

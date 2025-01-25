@@ -9,7 +9,8 @@ public class PlayerCamera : MonoBehaviour
     public PlayerManager player;
     public Camera cameraObject;
     [SerializeField] Transform cameraPivotTransform;
-
+    [SerializeField] private bool camera2;
+    
     [Header("Camera Settings")]
     [SerializeField] private Transform cameraTarget;
     [SerializeField] float cameraSmoothSpeed = 13f;
@@ -37,8 +38,9 @@ public class PlayerCamera : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         cameraZPosition = cameraObject.transform.localPosition.z;
+        
     }
 
     private void Update()
