@@ -10,6 +10,7 @@ public class StartGameVars : MonoBehaviour
     
     [SerializeField] public GameObject startButton;
     [SerializeField] public GameObject countdownObj;
+    [SerializeField] public TextMeshProUGUI scoreText;
     [SerializeField] public TextMeshProUGUI countdownText;
     [SerializeField] public GameObject player1Restraint;
     [SerializeField] public GameObject player2Restraint;
@@ -24,5 +25,15 @@ public class StartGameVars : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        GameManager.instance.FetchStartGameVars();
+    }
+
+    public void StartGame()
+    {
+        GameManager.instance.StartGame();
     }
 }

@@ -358,6 +358,140 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &250111537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 250111538}
+  - component: {fileID: 250111540}
+  - component: {fileID: 250111539}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &250111538
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250111537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 770853623}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 200, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &250111539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250111537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0-0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190280
+  m_fontColor: {r: 0.78431374, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &250111540
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250111537}
+  m_CullTransparentMesh: 1
 --- !u!1 &288500781
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +683,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 0
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
   weapon: {fileID: 7120115496224470096}
   isShieldArm: 1
 --- !u!1 &352289251
@@ -580,7 +716,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5272cbec97bdd734886a7bbcc7cca0c0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1424,7 +1560,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &530302263
 MeshRenderer:
@@ -1556,6 +1692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
 --- !u!1 &530945730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
   weapon: {fileID: 1696072010}
   isShieldArm: 0
 --- !u!1 &673497808
@@ -2547,6 +2687,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 727867285}
+  - {fileID: 250111538}
   - {fileID: 1563866188}
   - {fileID: 1807992404}
   m_Father: {fileID: 0}
@@ -2800,6 +2941,7 @@ MonoBehaviour:
   startButton: {fileID: 1807992403}
   countdownObj: {fileID: 727867284}
   countdownText: {fileID: 727867286}
+  scoreText: {fileID: 250111539}
   countdownTimer: 3
   elapsedTime: 0
   slowTimer: 0
@@ -2808,6 +2950,8 @@ MonoBehaviour:
   player2Restraint: {fileID: 445376047}
   slowAmountOnGameOver: 0.1
   gameOver: 0
+  plr1Score: 0
+  plr2Score: 0
 --- !u!4 &906735692
 Transform:
   m_ObjectHideFlags: 0
@@ -2919,6 +3063,7 @@ GameObject:
   - component: {fileID: 952336715}
   - component: {fileID: 952336714}
   - component: {fileID: 952336713}
+  - component: {fileID: 952336717}
   m_Layer: 7
   m_Name: Left Leg Lower
   m_TagString: Poppable
@@ -3082,6 +3227,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952336711}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &952336717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952336711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,7 +3400,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3736,6 +3897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 0
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
   weapon: {fileID: 7120115496224470096}
   isShieldArm: 1
 --- !u!1 &1303589670
@@ -3929,6 +4092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
   weapon: {fileID: 1696072010}
   isShieldArm: 0
 --- !u!1 &1446558091
@@ -4343,6 +4508,7 @@ GameObject:
   - component: {fileID: 1562822725}
   - component: {fileID: 1562822724}
   - component: {fileID: 1562822723}
+  - component: {fileID: 1562822727}
   m_Layer: 7
   m_Name: Right Leg Lower
   m_TagString: Poppable
@@ -4506,6 +4672,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562822721}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1562822727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562822721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
 --- !u!1 &1563866187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,6 +4918,7 @@ GameObject:
   - component: {fileID: 1642045982}
   - component: {fileID: 1642045981}
   - component: {fileID: 1642045980}
+  - component: {fileID: 1642045984}
   m_Layer: 7
   m_Name: Left Leg Upper
   m_TagString: Poppable
@@ -4899,6 +5082,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642045978}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1642045984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642045978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
 --- !u!1 &1696072010
 GameObject:
   m_ObjectHideFlags: 0
@@ -5430,8 +5629,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.4
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1774457571
@@ -5564,6 +5763,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
+--- !u!1 &1804592629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804592631}
+  - component: {fileID: 1804592630}
+  m_Layer: 0
+  m_Name: Game Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1804592630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804592629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3dbbdedb328974a80b525b49ec085f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 1807992403}
+  countdownObj: {fileID: 727867284}
+  scoreText: {fileID: 250111539}
+  countdownText: {fileID: 727867286}
+  player1Restraint: {fileID: 454344138}
+  player2Restraint: {fileID: 445376047}
+--- !u!4 &1804592631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804592629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 403.88702, y: 290.26434, z: 2.3296185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1807992403
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,8 +5898,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 906735691}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1804592630}
+        m_TargetAssemblyTypeName: StartGameVars, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -5727,6 +5978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popVFX: {fileID: 4484527030619699243, guid: aebe97be055ff2f488e92f14ace1f574, type: 3}
+  smallPopVFX: {fileID: 2070696538110464706, guid: 832c8b9670f720048a68d67c86434f75, type: 3}
 --- !u!4 &1821541894
 Transform:
   m_ObjectHideFlags: 0
@@ -5906,6 +6158,7 @@ GameObject:
   - component: {fileID: 2043392799}
   - component: {fileID: 2043392798}
   - component: {fileID: 2043392797}
+  - component: {fileID: 2043392801}
   m_Layer: 7
   m_Name: Right Leg Upper
   m_TagString: Poppable
@@ -6069,6 +6322,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043392795}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2043392801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043392795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 2
 --- !u!1 &2049512375
 GameObject:
   m_ObjectHideFlags: 0
@@ -7420,6 +7689,7 @@ GameObject:
   - component: {fileID: 291657335561850522}
   - component: {fileID: 184957647986366228}
   - component: {fileID: 275947502136739418}
+  - component: {fileID: 3914349168156805932}
   m_Layer: 6
   m_Name: Right Leg Lower
   m_TagString: Poppable
@@ -7520,6 +7790,7 @@ GameObject:
   - component: {fileID: 7615722475009545001}
   - component: {fileID: 8509949876774107467}
   - component: {fileID: 8331493605383122917}
+  - component: {fileID: 8509949876774107468}
   m_Layer: 6
   m_Name: Left Leg Upper
   m_TagString: Poppable
@@ -7642,6 +7913,22 @@ Transform:
   - {fileID: 706571982}
   m_Father: {fileID: 2304407183048069862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3914349168156805932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865511357243076152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
 --- !u!1 &3959681540906971496
 GameObject:
   m_ObjectHideFlags: 0
@@ -7776,8 +8063,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.4
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &4142040783774563047
@@ -8389,7 +8676,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &5329305410374958387
 MeshRenderer:
@@ -8765,6 +9052,7 @@ GameObject:
   - component: {fileID: 1565837146504493193}
   - component: {fileID: 6597709250239189257}
   - component: {fileID: 4724150858921053579}
+  - component: {fileID: 8845925770732985355}
   m_Layer: 6
   m_Name: Left Leg Lower
   m_TagString: Poppable
@@ -8923,6 +9211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 0
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
   weapon: {fileID: 8366066684867952291}
   isShieldArm: 1
 --- !u!4 &6960533330065587860
@@ -8970,6 +9260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
 --- !u!1 &7007098592936545970
 GameObject:
   m_ObjectHideFlags: 0
@@ -9233,6 +9525,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
   weapon: {fileID: 8412383759889264273}
   isShieldArm: 0
 --- !u!23 &7615722475009545001
@@ -9320,6 +9614,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 0
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
   weapon: {fileID: 8366066684867952291}
   isShieldArm: 1
 --- !u!171741748 &7669868208396030140
@@ -9589,6 +9885,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
 --- !u!1 &8412383759889264273
 GameObject:
   m_ObjectHideFlags: 0
@@ -9702,6 +10000,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8509949876774107468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3316898610179298591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
 --- !u!23 &8680556478308154403
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9765,6 +10079,7 @@ GameObject:
   - component: {fileID: 3464869525591215697}
   - component: {fileID: 2296045795076546301}
   - component: {fileID: 1367291697755042664}
+  - component: {fileID: 8734044000063741736}
   m_Layer: 6
   m_Name: Right Leg Upper
   m_TagString: Poppable
@@ -9772,6 +10087,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8734044000063741736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734044000063741735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
 --- !u!171741748 &8843100762339939954
 ArticulationBody:
   m_ObjectHideFlags: 0
@@ -9852,6 +10183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crucialLimb: 1
   popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
   weapon: {fileID: 8412383759889264273}
   isShieldArm: 0
 --- !u!4 &8845925770732985354
@@ -9871,6 +10204,22 @@ Transform:
   - {fileID: 2683935647433291150}
   m_Father: {fileID: 1332013385343583095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8845925770732985355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654459796902482210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf857bd562de642aa9f032f2109528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crucialLimb: 0
+  popVFX: {fileID: 0}
+  smallPopVFX: {fileID: 0}
+  whichPlayer: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9886,3 +10235,4 @@ SceneRoots:
   - {fileID: 509857931}
   - {fileID: 1821541894}
   - {fileID: 989718290}
+  - {fileID: 1804592631}

@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+    private Coroutine countdownCoroutine;
+
     [SerializeField] GameObject startButton;
     [SerializeField] private GameObject countdownObj;
     [SerializeField] private TextMeshProUGUI countdownText;
@@ -44,22 +45,26 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
-    private void FetchStartGameVars()
+    public void FetchStartGameVars()
     {
         startButton = StartGameVars.instance.startButton;
         countdownObj = StartGameVars.instance.countdownObj;
         countdownText = StartGameVars.instance.countdownText;
+        scoreText = StartGameVars.instance.scoreText;
         player1Restraint = StartGameVars.instance.player1Restraint;
         player2Restraint = StartGameVars.instance.player2Restraint;
-    }
-    private void Start()
-    {
-        //DontDestroyOnLoad(gameObject);
+
+        SetScoreboard();
     }
 
     private void SetScoreboard()
     {
+        Debug.Log("a");
         scoreText.text = plr1Score + " - " + plr2Score;
     }
     private void Update()
@@ -70,7 +75,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         startButton.SetActive(false);
-        StartCoroutine(GameCountdown());
+        countdownCoroutine = StartCoroutine(GameCountdown());
     }
 
     private IEnumerator GameCountdown()
@@ -89,14 +94,15 @@ public class GameManager : MonoBehaviour
         }
 
         countdownText.text = "Go!";
+        elapsedTime = 3;
         yield return new WaitForSeconds(0.5f);
         countdownObj.SetActive(false);
         player1Restraint.SetActive(false);
         player2Restraint.SetActive(false);
         
         SoundManager.instance.PlayMusic();
-        
-        yield return null;
+        yield break;
+       
     }
 
     private void GameEnd()
@@ -115,11 +121,12 @@ public class GameManager : MonoBehaviour
     }
     private void GameReset()
     {
+        gameOver = false;
+        elapsedTime = 3;
         Time.timeScale = 1;
+        countdownText.text = elapsedTime.ToString("F1");
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //FetchStartGameVars();
-        SetScoreboard();
-        StartGame();
     }
     public void InstantiateShieldWhenArmPopped(Transform weaponTransform)
     {
