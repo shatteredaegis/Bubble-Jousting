@@ -1693,7 +1693,7 @@ MonoBehaviour:
   crucialLimb: 1
   popVFX: {fileID: 0}
   smallPopVFX: {fileID: 0}
-  whichPlayer: 0
+  whichPlayer: 2
 --- !u!1 &530945730
 GameObject:
   m_ObjectHideFlags: 0

@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void SetScoreboard()
     {
         Debug.Log("a");
-        scoreText.text = plr1Score + " - " + plr2Score;
+        scoreText.text = plr2Score + " - " + plr1Score;
     }
     private void Update()
     {
