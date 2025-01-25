@@ -6,6 +6,10 @@ using UnityEngine;
 public class PlayerSword : MonoBehaviour
 {
     [SerializeField] private PoppableLimb limb;
+    [SerializeField] private Transform vfxPoint;
+    
+    public GameObject shieldHitVFX;
+    public GameObject swordHitVFX;
     private void OnCollisionEnter(Collision coll)
     {
         if (coll.collider.CompareTag("Poppable") && coll.gameObject.layer != gameObject.layer)
@@ -18,6 +22,18 @@ public class PlayerSword : MonoBehaviour
             }
 
             limb.PopLimb();
+        }
+
+        if (coll.collider.CompareTag("Sword") && coll.gameObject.layer != gameObject.layer)
+        {
+            GameObject swordClashVFX = Instantiate(swordHitVFX, vfxPoint);
+            SoundManager.instance.PlaySwordHitSFX();
+        }
+        
+        if (coll.collider.CompareTag("Shield") && coll.gameObject.layer != gameObject.layer)
+        {
+            GameObject swordClashVFX = Instantiate(shieldHitVFX, vfxPoint);
+            SoundManager.instance.PlayShieldHitSFX();
         }
     }
 }

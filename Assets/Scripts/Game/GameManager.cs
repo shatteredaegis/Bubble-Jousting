@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameCountdown()
     {
+        SoundManager.instance.playCDSFX();
+        
         elapsedTime = countdownTimer;
         
         countdownObj.SetActive(true);
@@ -74,6 +76,8 @@ public class GameManager : MonoBehaviour
         countdownObj.SetActive(false);
         player1Restraint.SetActive(false);
         player2Restraint.SetActive(false);
+        
+        SoundManager.instance.PlayMusic();
         
         yield return null;
     }

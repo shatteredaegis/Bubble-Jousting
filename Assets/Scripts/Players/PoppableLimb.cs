@@ -39,15 +39,19 @@ public class PoppableLimb : MonoBehaviour
         else
         {
             PopVFX(gameObject.transform);
+            SoundManager.instance.playPopSFX();
             gameObject.SetActive(false);
         }
     }
 
     private IEnumerator PopCrucialLimb()
     {
-        yield return new WaitForSeconds(0.5f);
+        SoundManager.instance.fadingMusic = true;
+        
+        yield return new WaitForSeconds(1);
         
         PopVFX(gameObject.transform);
+        SoundManager.instance.playPopSFX();
         gameObject.SetActive(false);
 
         yield return null;

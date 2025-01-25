@@ -8,7 +8,6 @@ public class VFXManager : MonoBehaviour
     public static VFXManager instance;
     
     public GameObject popVFX;
-    public GameObject shieldHitVFX;
 
     private void Awake()
     {
